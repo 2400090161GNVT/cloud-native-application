@@ -31,10 +31,10 @@ jobs:
       # Step 4: Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t nagendra/myapp:${{ github.sha }} .
+          docker build -t nagendra770/myapp:${{ github.sha }} .
 
       # Step 5: Optionally, push the Docker image to Docker Hub
       - name: Push Docker image
         if: github.ref == 'refs/heads/main'   # Only push on main branch
         run: |
-          docker push nagendra/myapp:${{ github.sha }}
+          docker push nagendra770/myapp:${{ github.sha }}
